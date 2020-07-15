@@ -28,8 +28,9 @@ def make_list_of_words(str_list):
     for news in str_list:
         words_in_news = news.split(' ')
         for word in words_in_news:
-            if len(word) > 6:
-                news_words.append(word)
+            word_lower = word.lower()
+            if len(word_lower) > 6:
+                news_words.append(word_lower)
     return sorted(news_words)
 
 
